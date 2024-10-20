@@ -19,7 +19,7 @@ class ImageSubcriber(Node):
         frame_bgr = cv2.cvtColor(cv_image, cv2.COLOR_RGB2BGR)
 
         hsv = cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2HSV)
-        low_yellow = np.array([16,143,104]) #white colour masking process
+        low_yellow = np.array([16,143,104]) 
         high_yellow = np.array([46,249,214])
         yellow_mask = cv2.inRange(hsv, low_yellow, high_yellow)
         
